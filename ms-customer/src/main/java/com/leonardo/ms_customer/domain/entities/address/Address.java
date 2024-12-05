@@ -2,6 +2,7 @@ package com.leonardo.ms_customer.domain.entities.address;
 
 public interface Address {
 
+        Long getId();
         String getStreet();
 
         String getNumber();
@@ -13,8 +14,6 @@ public interface Address {
         String getCity();
 
         String getState();
-
-        String getCountry();
 
         String getZipCode();
 }

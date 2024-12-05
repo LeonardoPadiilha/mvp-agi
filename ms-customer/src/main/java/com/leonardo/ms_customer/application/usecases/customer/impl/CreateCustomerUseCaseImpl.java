@@ -3,6 +3,7 @@ package com.leonardo.ms_customer.application.usecases.customer.impl;
 import com.leonardo.ms_customer.application.gateways.CustomerGateway;
 import com.leonardo.ms_customer.application.usecases.customer.CreateCustomerUseCase;
 import com.leonardo.ms_customer.domain.entities.customer.Customer;
+import com.leonardo.ms_customer.domain.entities.customer.CustomerDomain;
 
 public class CreateCustomerUseCaseImpl implements CreateCustomerUseCase {
 
@@ -14,7 +15,7 @@ public class CreateCustomerUseCaseImpl implements CreateCustomerUseCase {
 
     @Override
     public Customer execute(Customer customer) {
-        return customerGateway.create(customer);
+        return customerGateway.create((CustomerDomain) customer);
     }
 
 }
